@@ -201,7 +201,7 @@ body.nav-md .container.body .right_col {
   float: left;
   background: #FFFFFF;
   border-radius: 0;
-  height: 58px;
+  height: 59px;
 }
 @media (max-width: 991px) {
   body.nav-md .container.body .right_col, body.nav-md .container.body .top_nav {
@@ -731,11 +731,16 @@ a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
 article.media {
   width: 100%;
 }
-.cms.cms-text.cms-message-box{
-
+.cms.cms-container.cms-center{
+  background-color:#fff;
   position:absolute;
-  left:0px;
+  width:100%;
   bottom:0px;
+  height:100%;
+
+}
+body.ember-application .main_container .cms-login-button{
+  background-color:#2196f3;
 }
 /* *********  custom accordion  **************************** */
 
