@@ -1,4 +1,4 @@
-<div class="cms cms-content">
+{{!-- <div class="cms cms-content">
   <div class="cms cms-container">
     <div class="cms cms-aside cms-text">
       {{#if collections }}
@@ -22,3 +22,79 @@
     {{outlet}}
   </div>
 </div>
+ --}}
+
+<div class="body_container">
+<div class="body_main">
+      <div class="col-md-3 left_col" id="left_col-2">
+        <div class="left_col scroll-view">
+
+       <div class="clearfix"></div>
+         <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              {{#if collections }}
+        <ul class="cms cms-nav-menu">
+          {{#each collections as |collection|}}
+            <li class="cms cms-collection">
+              {{#link-to "index.list" collection class="cms cms-aside-link"}}
+                <i class="cms cms-icon cms-icon-selector"></i>
+                {{collection.label}}
+              {{/link-to}}
+              {{#if collection.create}}
+                {{#link-to "create" collection class="cms cms-aside-new-link"}}
+                  <i class="cms cms-icon-create"></i> New
+                {{/link-to}}
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      {{/if}}
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+        </div>
+      </div>
+{{outlet}}
+      {{!-- <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+
+          <div class="clearfix"></div>
+
+          <div class="row">
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Plain Page</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">{{outlet}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+      <!-- /page content --> --}}
+
+    </div>
+    </div>
+

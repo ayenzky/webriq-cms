@@ -1,23 +1,36 @@
-<div class="cms cms-base cms-wrapper {{if showSidebar 'cms-show-sidebar' 'cms-hide-sidebar'}}">
-  <div class="cms cms-main">
-      <div class="cms cms-navbar-top cms-text">
-        <div class="cms cms-left-menu">
-          <div class="cms-logo">
-            {{#link-to 'index'}}
-              <svg viewBox="0 0 200 200" style="-webkit-transform: rotate(45deg); -ms-transform(45deg); transform: rotate(45deg)" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="nf-logo-bg" stroke="none" stroke-width="1" fill="#3FB5A0"><path d="M0,0 L200,0 L200,200 L0,200 L0,0 Z"></path></g><g id="nf-logo-lines" stroke="rgb(39,46,48)" stroke-width="8" fill="none"><path d="M205,66 L-4,205 Z"></path><path d="M205,2 L-4,89 Z"></path><path d="M205,176 L-4,141 Z"></path><path d="M84,205 L39,-4 Z"></path><path d="M205,168 L85,-4 Z"></path><path d="M133,-4 L53,205 Z"></path></g><g id="nf-logo-circles" stroke="none" stroke-width="1" fill="rgb(39,46,48)"><circle cx="53" cy="67" r="14"></circle><circle cx="116" cy="41" r="12"></circle><circle cx="155" cy="99" r="12"></circle><circle cx="74" cy="154" r="16"></circle></g></svg>
-            {{/link-to}}
-          </div>
+<div class="container body {{if showSidebar 'cms-show-sidebar' 'cms-hide-sidebar'}}">
+<div class="main_container">
+<!-- top navigation -->
+      <div class="top_nav">
 
-          <div class="cms cms-breadcrumb">{{cms-breadcrumbs}}</div>
-        </div>
-        <div class="cms cms-right-menu">
-          <ul class="cms cms-inline-list">
-            <li class="cms cms-li cms-has-dropdown">
-              <a class="cms cms-nav-link" href="#" {{action "toggleCollections"}}>
-                <i class="cms cms-icon cms-icon-new"></i>
-                New
-              </a>
-              <ul class="cms cms-dropdown {{if showCollections 'cms-open' 'cms-closed'}}">
+        <div class="nav_menu">
+          <nav class="" role="navigation">
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="cms cms-breadcrumb">{{cms-breadcrumbs}}</div>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <img class="logo" src="../assets/img/logo@xs.png">WebriQ
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+                  <li>
+                    <a href="javascript:;">Help</a>
+                  </li>
+                  <li><a href="#" class="cms cms-dropdown-link" {{action "logout"}}><i class="fa fa-sign-out pull-right"></i> Log out</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li role="presentation" class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-file-text-o"></i> New
+
+                </a>
+                  <ul class="dropdown-menu list-unstyled msg_list animated fadeInDown {{if showCollections 'cms-open' 'cms-closed'}}" role="menu">
                 {{#each collections as |collection|}}
                   {{#if collection.create}}
                     <li class="cms-dropdown-li">
@@ -26,25 +39,28 @@
                   {{/if}}
                 {{/each}}
               </ul>
-            </li>
-            <li class="cms cms-li cms-has-dropdown">
-              <a class="cms cms-nav-link" href="#" {{action "toggleProfile"}}>
-                <i class="cms cms-icon cms-icon-profile"></i>
-                Profile
-              </a>
-              <ul class="cms cms-dropdown {{if showProfile 'cms-open' 'cms-closed'}}">
-                <li class="cms cms-dropdown-li">
-                  <a href="#" class="cms cms-dropdown-link" {{action "logout"}}>Log out</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+      <!-- /top navigation -->
+      <div class="col-md-3 left_col" id="left_col-1">
+        <div class="left_col scroll-view">
+
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><img class="logo" src="../assets/img/logo@xs.png">&nbsp;WebriQ</a>
+        </div>
+
+
         </div>
       </div>
+{{outlet}}
+</div>
 
-      {{outlet}}
-  </div>
-  <div class="cms cms-sidebar cms-text">
+ <div class="cms cms-sidebar cms-text">
     {{outlet "sidebar"}}
   </div>
 </div>
