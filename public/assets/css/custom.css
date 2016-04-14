@@ -731,7 +731,12 @@ a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
 article.media {
   width: 100%;
 }
+.cms.cms-text.cms-message-box{
 
+  position:absolute;
+  left:0px;
+  bottom:0px;
+}
 /* *********  custom accordion  **************************** */
 
 *, *:before, *:after {
