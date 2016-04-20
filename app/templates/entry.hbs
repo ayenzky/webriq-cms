@@ -1,4 +1,14 @@
-<div class="cms cms-content cms-entry-editor">
+<div id="parentHorizontalTab">
+
+
+<ul class="resp-tabs-list hor_1">
+                <li>Editior</li>
+                <li>Preview</li>
+            </ul>
+
+<div class="resp-tabs-container hor_1">
+                <div>
+
   {{#cms-entry-form action="save"}}
     {{#each widgets as |widget|}}
       {{#unless widget.hidden}}
@@ -11,7 +21,16 @@
       {{/unless}}
     {{/each}}
   {{/cms-entry-form}}
+
+ </div>
+
+<div>
+
   {{cms-preview-pane entry=entry collection=collection widgets=widgets}}
+
+  </div>
+
+</div>
 </div>
 <div class="cms cms-navbar-bottom cms-text">
   <div class="cms cms-loading-indicator {{if saving 'cms-loading'}}">

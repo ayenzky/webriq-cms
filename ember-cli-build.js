@@ -29,6 +29,7 @@ module.exports = function(defaults) {
   app.import('bower_components/jt.timepicker/jquery.timepicker.js');
   app.import('bower_components/jquery.scrollTo/jquery.scrollTo.js');
 
+
   var appTree = app.toTree();
 
   var jsRelease = concatenate(appTree, {

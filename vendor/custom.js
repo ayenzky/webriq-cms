@@ -5,7 +5,20 @@
  */
 
 // Sidebar
+
+function tabload(){
+
+setTimeout(function(){
+
+
+
+}, 50)
+
+
+}
+
 $(document).ajaxComplete(function () {
+
     setTimeout(function(){
 
     $('#sidebar-menu li ul').slideUp();
@@ -29,6 +42,20 @@ $(document).ajaxComplete(function () {
             }
         }
     });
+
+    $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
 
     $('#menu_toggle').click(function () {
         if ($('body').hasClass('nav-md')) {
@@ -63,21 +90,9 @@ $(document).ajaxComplete(function () {
     }, 50);
 });
 
-    // $('#parentHorizontalTab').easyResponsiveTabs({
-    //         type: 'default', //Types: default, vertical, accordion
-    //         width: 'auto', //auto or any width like 600px
-    //         fit: true, // 100% fit in a container
-    //         tabidentify: 'hor_1', // The tab groups identifier
-    //         activate: function(event) { // Callback function if tab is switched
-    //             var $tab = $(this);
-    //             var $info = $('#nested-tabInfo');
-    //             var $name = $('span', $info);
-    //             $name.text($tab.text());
-    //             $info.show();
-    //         }
-    //     });
 
-     }, 10);
+
+     },60);
 });
 
 // Sidebar Menu active class
@@ -253,6 +268,10 @@ $(document).ready(function () {
     $('#stars-existing').on('starrr:change', function (e, value) {
         $('#count-existing').html(value);
     });
+
+    $("a.cms.cms-list-entry-link.ember-view").click(function(){
+        tabload();
+    })
 
 });
 

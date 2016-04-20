@@ -1,9 +1,57 @@
+.nav-md #left_col-2 .left_col{
+  width:100%;
+}
+#left_col-2 #sidebar-menu{
+  padding:20px;
+
+}
+#left_col-2 ul.cms.cms-nav-menu li a:first-child{
+  font-size:15px;
+}
+.nav-sm #left_col-2 ul.cms.cms-nav-menu li{
+  overflow:hidden;
+  text-align:center;
+
+}
+.nav-sm #left_col-2 ul.cms.cms-nav-menu li a:first-child{
+  font-size:0px;
+
+}
+.nav-sm #left_col-2 ul.cms.cms-nav-menu li a:first-child::before{
+  font-size:20px;
+  margin:auto;
+}
+
+#left_col-2 ul.cms.cms-nav-menu li a:first-child::before{
+  font-family:FontAwesome;
+  color:#fff;
+  text-rendering:auto;
+  -webkit-font-smoothing: antialiased;
+  width:auto;
+  text-align:center;
+  margin-right:10px;
+}
+
+a[href="#/collections/posts"]::before{
+  content:"\f0f6";
+}
+
+a[href="#/collections/faq"]::before{
+  content:"\f128";
+}
+
+a[href="#/collections/settings"]::before{
+  content:"\f013";
+}
+
+
 body.nav-sm .container.body .left_col {
   width: 70px;
   padding: 0;
   height: 100%;
   z-index: 200;
   position: absolute;
+  overflow:hidden;
 }
 
 body.nav-sm .container.body .right_col {
@@ -186,7 +234,7 @@ body.nav-md .container.body .col-md-3.left_col {
   display: flex;
 }
 .container.body .col-md-3.left_col#left_col-2{
-  top:10%;
+  top: 5%;
 }
 
 body .container.body .right_col {
@@ -731,16 +779,50 @@ a.btn-success, a.btn-primary, a.btn-warning, a.btn-danger {
 article.media {
   width: 100%;
 }
-.cms.cms-container.cms-center{
+.webriq.cms-container.cms-center{
   background-color:#fff;
   position:absolute;
   width:100%;
   bottom:0px;
   height:100%;
+  padding-top:5em;
+}
+.main_container .webriq.cms-message-title{
+  position:absolute;
+  width:100%;
+  text-align:center;
+  border:none;
+  padding:0px;
+  left:0px;
+  right:0px;
+  top:-6em;
+  color:#757575;
+  font-family:Lato;
+  font-weight:900;
+}
+
+.main_container .webriq.cms-message-title img{
+  width:90px;
+  margin-bottom:7px;
 
 }
-body.ember-application .main_container .cms-login-button{
+
+.main_container .webriq.cms-text.cms-message-box{
+  position:relative;
+  padding-top:50px;
+  color:#757575;
+  border:1px solid #e8eae8;
+  box-shadow:0 1px 2px rgba(0,0,0,.1);
+  -webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);
+  -ms-box-shadow:0 1px 2px rgba(0,0,0,.1);
+  -moz-box-shadow:0 1px 2px rgba(0,0,0,.1);
+}
+.main_container .webriq.cms-login-button{
   background-color:#2196f3;
+  text-decoration:none;
+  font-weight:300;
+  font-family:Lato;
+
 }
 /* *********  custom accordion  **************************** */
 
@@ -860,7 +942,21 @@ h2 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+
 }
+.x_title h2.create-new{
+  margin-left:15px;
+  padding-left:10px;
+  border-left:1px solid #73879C;
+}
+.x_title h2.create-new a{
+  color:#73879C;
+  font-size:14px;
+}
+.x_title h2.create-new a i.cms{
+  margin-right:0px !important;
+}
+
 .x_title h2 small {
   margin-left: 10px;
 }
@@ -876,8 +972,10 @@ h2 {
   margin-top: 5px;
 }
 .x_content .cms{
-  max-width:100% !important;
+  max-width:100%;
+  list-style:none;
 }
+
 
 .x_content h4 {
   font-size: 16px;

@@ -11,9 +11,9 @@
             <div class="cms cms-breadcrumb">{{cms-breadcrumbs}}</div>
 
             <ul class="nav navbar-nav navbar-right">
-              <li class="">
+              <li role="presentation" class="dropdown">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <img class="logo" src="../assets/img/logo@xs.png">WebriQ
+                  <img class="logo" src="../assets/images/logo@xs.png">WebriQ
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
@@ -40,6 +40,7 @@
                 {{/each}}
               </ul>
               </li>
+              <li><a href="/" target="_blank">View</a></li>
 
             </ul>
           </nav>
@@ -47,6 +48,7 @@
 
       </div>
       <!-- /top navigation -->
+    <div class="main-column">
       <div class="col-md-3 left_col" id="left_col-1">
         <div class="left_col scroll-view">
 
@@ -57,10 +59,11 @@
 
         </div>
       </div>
+      </div>
 {{outlet}}
 </div>
 
- <div class="cms cms-sidebar cms-text">
+ <div class="cms cms-sidebar cms-text" style="display:none;">
     {{outlet "sidebar"}}
   </div>
 </div>
