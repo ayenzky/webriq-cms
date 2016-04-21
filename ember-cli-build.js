@@ -28,6 +28,12 @@ module.exports = function(defaults) {
   app.import('bower_components/jquery-sortable/source/js/jquery-sortable.js');
   app.import('bower_components/jt.timepicker/jquery.timepicker.js');
   app.import('bower_components/jquery.scrollTo/jquery.scrollTo.js');
+  app.import('vendor/bootstrap.min.js');
+  // app.import('vendor/bootstrap-progressbar.min.js');
+  // app.import('vendor/pace.min.js')
+  app.import('vendor/easyResponsiveTabs.js')
+  app.import('vendor/custom.js')
+
 
 
   var appTree = app.toTree();
