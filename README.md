@@ -1,13 +1,13 @@
-# Netlify CMS
+# WebriQ CMS
 
 A CMS for static site generators. Give non-technical users a simple way to edit
 and add content to any site built with a static site generator.
 
-Try the UI demo here: [cms.netlify.com](https://cms.netlify.com).
+Try the UI demo here: [cms.webriq.com](https://cms.webriq.com).
 
 ## How it works
 
-Netlify CMS is a single-page app that you pull into the `/admin` part of your site.
+WebriQ CMS is a single-page app that you pull into the `/admin` part of your site.
 
 It presents a clean UI for editing content stored in a Git repository.
 
@@ -17,19 +17,9 @@ tweak the main layout of the CMS a bit to fit your own site.
 When a user navigates to `/admin` she'll be prompted to login, and once authenticated
 she'll be able to create new content or edit existing content.
 
-## Quick Start
-
-The easiest way to get started playing around with netlify CMS, is to clone one of
-our starter templates and start hacking:
-
-* [Jekyll + netlify CMS](https://github.com/netlify-templates/jekyll-netlify-cms)
-* [Roots + netlify CMS](https://github.com/netlify-templates/roots-cms-example)
-* [Hexo + netlify CMS](https://github.com/netlify-templates/hexo-cms-example)
-* [Pelican + netlify CMS](https://github.com/netlify-templates/pelican-netlify-cms)
-
 ## Installing
 
-Netlify CMS is an Ember app. To install it in your site, add an `/admin` folder in
+WebriQ CMS is an Ember app. To install it in your site, add an `/admin` folder in
 your source directory and use this `index.html` as a template:
 
 ```html
@@ -41,14 +31,14 @@ your source directory and use this `index.html` as a template:
 
   <title>Content Manager</title>
   <!-- Include the stylesheets from your site here -->
-  <link rel="stylesheet" href="//cms.netlify.com/assets/cms.css" />
+  <link rel="stylesheet" href="//cms.webriq.com/assets/cms.css" />
   <!-- Include a CMS specific stylesheet here -->
 
   <base href="/admin/">
 </head>
 <body>
-  <script src="//cms.netlify.com/assets/vendor.js"></script>
-  <script src="//cms.netlify.com/assets/cms.js"></script>
+  <script src="//cms.webriq.com/assets/vendor.js"></script>
+  <script src="//cms.webriq.com/assets/cms.js"></script>
 </body>
 </html>
 ```
@@ -86,7 +76,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Site cover image", name: "cover", widget: "image"}
 ```
 
-Netlify CMS works with the concept of collections of documents that a user can edit.
+WebriQ CMS works with the concept of collections of documents that a user can edit.
 
 Collections basically comes in three forms:
 
@@ -100,7 +90,7 @@ Collections basically comes in three forms:
 
 Each collection has a list of fields (or files with their individual fields). Each field has a `label`, a `name` and a `widget`.
 
-Setting up the right collections is the main part of integrating netlify CMS with your site. It's
+Setting up the right collections is the main part of integrating webriq CMS with your site. It's
 where you decide exactly what content editors can work with, and what widgets should be used to
 edit each field of your various files or content types.
 
@@ -125,7 +115,7 @@ production:
 # rest of the config here...
 ```
 
-Now when working locally, the CMS will use a local instance of the [netlify git API](https://github.com/netlify/netlify-git-api), but if you make sure to set `window.CMS_ENV="production"` in your production builds, then the CMS will work on Github's API in production.
+Now when working locally, the CMS will use a local instance of the [netlify git API](https://github.com/webriq/netlify-git-api), but if you make sure to set `window.CMS_ENV="production"` in your production builds, then the CMS will work on Github's API in production.
 
 
 ## Defining the config directly in your admin/index.html
@@ -156,10 +146,10 @@ log in.
 
 ## Local git backend
 
-If you don't have a Github repo or just wan't to work locally, netlify CMS also
+If you don't have a Github repo or just wan't to work locally, WebriQ CMS also
 has a local version of the Github api that you can run from any repo on your machine.
 
-Grab it from [the netlify-git-api repo](https://github.com/netlify/netlify-git-api/releases),
+Grab it from [the netlify-git-api repo](https://github.com/webriq/netlify-git-api/releases),
 follow the installation instructions, then CD into the repo with your site and run:
 
 ```bash
@@ -387,7 +377,7 @@ Here we use Ember's [Select View](http://emberjs.com/api/classes/Ember.Select.ht
 to let the user pick one of two authors and we use a custom preview to show the
 output like: `Written by Matt on April 29, 2015`.
 
-Netlify CMS includes a time format helper so you can easily format dates with the `{{time-format}}` helper via [moment.js's](http://momentjs.com/) formatting shortcuts.
+WebriQ CMS includes a time format helper so you can easily format dates with the `{{time-format}}` helper via [moment.js's](http://momentjs.com/) formatting shortcuts.
 
 ```html
 {{time-format entry.date ""}}
@@ -395,11 +385,11 @@ Netlify CMS includes a time format helper so you can easily format dates with th
 
 ### Template Helpers
 
-When writing preview templates or widget templates, you can use any component or helper normally available in Ember apps, but apart from that netlify CMS adds a few extra helpers:
+When writing preview templates or widget templates, you can use any component or helper normally available in Ember apps, but apart from that webriq CMS adds a few extra helpers:
 
 #### Time format
 
-Netlify CMS has a built-in time-format helper for formatting date and time with the formatting syntax from [moment.js](http://momentjs.com/).
+WebriQ CMS has a built-in time-format helper for formatting date and time with the formatting syntax from [moment.js](http://momentjs.com/).
 
 ```html
 <h2>Date: {{ time-format entry.date "dddd, MMMM Do YYYY, h:mm:ss a"}}</h2>
@@ -413,7 +403,7 @@ This would output something like:
 
 ### Custom Widgets
 
-Netlify CMS can easily be extended with custom widgets.
+WebriQ CMS can easily be extended with custom widgets.
 
 Each widget consists of two Ember Components.
 
@@ -555,5 +545,5 @@ Just as with CMS.WidgetControl, this is the same as defining a new Ember Compone
 
 Docs on file formats, internal APIs etc...
 
-This is obviously still early days for Netlify CMS, there's a long list of features
+This is obviously still early days for WebriQ CMS, there's a long list of features
 and improvements on the roadmap.
