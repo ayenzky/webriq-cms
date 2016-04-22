@@ -53,6 +53,7 @@ export default Ember.Controller.extend({
   prepare: function(collection, entry) {
     this.set("collection", collection);
     this.set("entry", entry);
+
   },
 
   // didInsertElement: function(){

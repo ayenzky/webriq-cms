@@ -36,6 +36,7 @@ module.exports = function(defaults) {
 
 
 
+
   var appTree = app.toTree();
 
   var jsRelease = concatenate(appTree, {

@@ -4,7 +4,7 @@
       <div class="top_nav">
 
         <div class="nav_menu">
-          <nav class="" role="navigation">
+          <nav class="menu" role="navigation">
             <div class="nav toggle">
               <a id="menu_toggle"><i class="fa fa-bars"></i></a>
             </div>
@@ -17,9 +17,9 @@
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
-                  <li>
+                  {{!-- <li>
                     <a href="javascript:;">Help</a>
-                  </li>
+                  </li> --}}
                   <li><a href="#" class="cms cms-dropdown-link" {{action "logout"}}><i class="fa fa-sign-out pull-right"></i> Log out</a>
                   </li>
                 </ul>
@@ -40,7 +40,7 @@
                 {{/each}}
               </ul>
               </li>
-              <li><a href="/" target="_blank">View</a></li>
+              <li><a href="/" target="_blank"><i class="fa fa-search" aria-hidden="true"></i> View</a></li>
 
             </ul>
           </nav>
@@ -63,7 +63,7 @@
 {{outlet}}
 </div>
 
- <div class="cms cms-sidebar cms-text" style="display:none;">
+ <div class="cms cms-sidebar cms-text">
     {{outlet "sidebar"}}
   </div>
 </div>

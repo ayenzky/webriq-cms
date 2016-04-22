@@ -57,7 +57,7 @@ body.ember-application {
       margin-right: $container-padding/2;
     }
     &.active {
-      color: $color-highlight;
+      color: #fff;
       .cms-icon {
         visibility: visible;
       }
@@ -126,7 +126,7 @@ body.ember-application {
 
   .cms-message {
     font-size: 14px;
-    color: $color-text-normal;
+    color: $color_red;
   }
 
   .cms-loading-indicator {

@@ -3,13 +3,13 @@ body.ember-application {
     height: 100%;
   }
 
-  .cms-wrapper {
+  .container {
     display: flex;
     height: 100%;
     overflow: hidden;
     width: 100%;
   }
-  .cms-main {
+  .main_container {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
@@ -24,7 +24,7 @@ body.ember-application {
     transition: transform 0.03s ease-in-out;
   }
   .cms-show-sidebar {
-    .cms-main, .cms-sidebar {
+    .main_container, .cms-sidebar {
       transform: translateX(-$sidebar_width);
     }
   }
@@ -205,9 +205,17 @@ body.ember-application {
     padding: 0;
   }
   .cms-preview-pane {
-    padding: 0 $container_padding*2 0 $container_padding;
+    padding: $container_padding*2  $container_padding;
+    background-color:#fff;
+    color:#222;
+    font-family:'Open sans', Arial, sans-serif;
+    font-weight:400;
+
     img {
       max-width: 100%;
+    }
+    h1, h2, h3, h4, h5{
+      font-weight: 700;
     }
   }
 

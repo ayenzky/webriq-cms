@@ -5,8 +5,14 @@
  */
 
 // Sidebar
+
+
 $(document).ajaxComplete(function () {
+    $('body').addClass('nav-md');
+
     setTimeout(function(){
+
+
 
     $('#sidebar-menu li ul').slideUp();
     $('#sidebar-menu li').removeClass('active');
@@ -50,18 +56,18 @@ $(document).ajaxComplete(function () {
 
     });
 
-    $('.collapse-link').click(function () {
-    var x_panel = $(this).closest('div.x_panel');
-    var button = $(this).find('i');
-    var content = x_panel.find('div.x_content');
-    content.slideToggle(200);
-    (x_panel.hasClass('fixed_height_390') ? x_panel.toggleClass('').toggleClass('fixed_height_390') : '');
-    (x_panel.hasClass('fixed_height_320') ? x_panel.toggleClass('').toggleClass('fixed_height_320') : '');
-    button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
-    setTimeout(function () {
-        x_panel.resize();
-    }, 50);
-});
+//     $('.collapse-link').click(function () {
+//     var x_panel = $(this).closest('div.x_panel');
+//     var button = $(this).find('i');
+//     var content = x_panel.find('div.x_content');
+//     content.slideToggle(200);
+//     (x_panel.hasClass('fixed_height_390') ? x_panel.toggleClass('').toggleClass('fixed_height_390') : '');
+//     (x_panel.hasClass('fixed_height_320') ? x_panel.toggleClass('').toggleClass('fixed_height_320') : '');
+//     button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+//     setTimeout(function () {
+//         x_panel.resize();
+//     }, 3000);
+// });
 
     // $('#parentHorizontalTab').easyResponsiveTabs({
     //         type: 'default', //Types: default, vertical, accordion
@@ -77,7 +83,37 @@ $(document).ajaxComplete(function () {
     //         }
     //     });
 
-     }, 10);
+
+
+//     $("h3").on('click', function(){
+
+//     setTimeout(function() {
+//    if ($('#parentHorizontalTab').length) {
+//       // console.log("Exists!");
+//       $('#parentHorizontalTab').easyResponsiveTabs({
+//             type: 'default', //Types: default, vertical, accordion
+//             width: 'auto', //auto or any width like 600px
+//             fit: true, // 100% fit in a container
+//             tabidentify: 'hor_1', // The tab groups identifier
+//             activate: function(event) { // Callback function if tab is switched
+//                 var $tab = $(this);
+//                 var $info = $('#nested-tabInfo');
+//                 var $name = $('span', $info);
+//                 $name.text($tab.text());
+//                 $info.show();
+//             }
+//         });
+
+//    }
+
+// }, 100);
+
+
+//     });
+
+
+
+     }, 1000);
 });
 
 // Sidebar Menu active class

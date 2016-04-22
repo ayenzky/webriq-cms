@@ -40,6 +40,7 @@ var Collection = Ember.Object.extend({
     this._super.apply(this, arguments);
     this.id = this.name;
     this.slugFormatter = slugFormatterFn(this.slug);
+
   },
 
   id: Ember.computed.alias("name"),
