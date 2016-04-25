@@ -44,13 +44,13 @@ body.ember-application {
     text-decoration: none;
   }
   .cms-breadcrumb-separator {
-    color: $color-highlight;
+    color: #aaa;
   }
   .cms-collection {
     margin-bottom: $container-padding;
   }
   .cms-aside-link {
-    color: $color-text-normal;
+    color: #fff;
     text-decoration: none;
     .cms-icon {
       visibility: hidden;
@@ -66,7 +66,7 @@ body.ember-application {
   .cms-aside-new-link {
     float: right;
   }
-  .cms-aside-new-link, .cms-new-link {
+  .cms-new-link {
     text-decoration: none;
     color: darken($color-text-normal, 5%);
     text-transform: uppercase;
@@ -197,7 +197,8 @@ body.ember-application {
   }
 
   .cms-sidebar-title {
-    color: $color-text-normal;
+    color: #fff;
+    font-weight:300;
   }
   .cms-sidebar-actions {
     text-align: center;

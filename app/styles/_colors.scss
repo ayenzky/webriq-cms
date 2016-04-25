@@ -1,5 +1,8 @@
 body.ember-application {
-  .cms-sidebar-top, .cms-sidebar-content {
+  .cms-sidebar-top{
+    background: #2196f3;
+  }
+  .cms-sidebar-content {
     background: #fff;
   }
   .cms-navbar-bottom {
