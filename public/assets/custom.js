@@ -10,7 +10,6 @@
 $(document).ajaxComplete(function () {
     $('body').addClass('nav-md');
     $('.ember-view.cms-form cms-control-pane').addClass("test");
-
     setTimeout(function(){
 
 

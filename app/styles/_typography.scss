@@ -9,7 +9,7 @@ body.ember-application {
   .cms-control {
     input:not([type="checkbox"]), textarea {
       font-size: $font_size;
-      color: $color-text-normal;
+      color: #777;
     }
   }
 }
