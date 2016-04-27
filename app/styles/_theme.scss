@@ -107,6 +107,7 @@ body.ember-application {
     margin-top: 2*$container-padding;
     padding: 15px;
     border-radius: 50px;
+    -webkit-border-radius: 50px;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
