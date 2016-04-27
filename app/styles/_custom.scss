@@ -1999,9 +1999,12 @@ a.user-profile {
 }
 
 .user-profile img {
-  width: 29px;
+  width: 30px;
   height: auto;
   margin-right: 10px;
+  border: 1px solid #f5f5f5;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
 }
 
 ul.top_profiles {
