@@ -100,7 +100,8 @@ body.ember-application {
   .cms-login-button {
     display: block;
     margin-top: 2*$container-padding;
-    padding: $container-padding;
+    padding: 15px;
+    border-radius: 50px;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
