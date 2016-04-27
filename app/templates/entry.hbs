@@ -1,3 +1,6 @@
+<div class="cms cms-loading-indicator {{if saving 'cms-loading'}}">
+    <div class="cms cms-loading-indicator-inner"></div>
+</div>
 <div class="cms cms-content cms-entry-editor">
   {{#cms-entry-form action="save"}}
     {{#each widgets as |widget|}}
@@ -14,9 +17,9 @@
   {{cms-preview-pane entry=entry collection=collection widgets=widgets}}
 </div>
 <div class="cms cms-navbar-bottom cms-text">
-  <div class="cms cms-loading-indicator {{if saving 'cms-loading'}}">
+  {{!-- <div class="cms cms-loading-indicator {{if saving 'cms-loading'}}">
     <div class="cms cms-loading-indicator-inner"></div>
-  </div>
+  </div> --}}
   <div class="cms cms-left-menu">
     {{#if error}}
       <span class="cms-message">{{error}}</span>

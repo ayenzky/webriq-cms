@@ -142,11 +142,14 @@ body.ember-application {
     width: $container-padding;
     height: $container-padding;
     position: absolute;
-    top: $container-padding;
+    top: 50%;
     left: 50%;
+    right: 50%;
+    display:none;
     margin-left: -($container-padding/2);
     &.cms-loading {
       animation: spin 2s cubic-bezier(0.785, 0.135, 0.150, 0.860) 0s infinite;
+      display:block;
       .cms-loading-indicator-inner {
         animation: spin 2s cubic-bezier(0.455, 0.030, 0.515, 0.955)  0s infinite;
       }
