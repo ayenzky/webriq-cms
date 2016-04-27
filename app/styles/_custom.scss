@@ -21,8 +21,7 @@ h1, h2, h3, h4, h5 {
 
 #left_col-2 {
   #sidebar-menu {
-    padding: 0px 20px;
-    margin-top:5em;
+    margin-top:2.8em;
   }
   ul.cms.cms-nav-menu li a:first-child {
     font-size: 15px;
@@ -323,8 +322,8 @@ body {
 
 @media (max-width: 1200px) {
   .x_title h2 {
-    width: 62%;
-    font-size: 17px;
+    width: auto;
+    font-size: 16px;
   }
   .tile, .graph {
     zoom: 85%;
@@ -895,7 +894,7 @@ li.current-page a {
 .x_content canvas {}
 
 footer {
-  background: #fff;
+  background: #eee;
   padding: 15px 20px;
   margin: 0 -10px;
 }
@@ -997,6 +996,9 @@ body.ember-application .cms {
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .cms-sidebar-bottom {
+    padding:20px;
   }
 
 
@@ -1744,6 +1746,9 @@ ul.msg_list li a {
   border-top-right-radius: 0;
   > li > a {
     color: #5A738E;
+  }
+  > li > a:hover{
+    color: $color_highlight;
   }
 }
 
@@ -4968,6 +4973,25 @@ ul {
   }
 }
 
+@media (max-width: 600px) {
+  body.ember-application {
+    .cms-preview-pane {
+      display: none;
+    }
+    .cms-control-pane, .cms-right-menu {
+      width: 100%;
+    }
+    .cms-loading-indicator{
+      left:5%;
+      top:40%;
+    }
+    .cms-navbar-bottom{
+      height:auto;
+    }
+  }
+}
+
+
 @media (min-width: 992px) {
   .cropper-point.point-se {
     width: 10px;
@@ -6040,6 +6064,18 @@ body {
 
 .btn-upload .tooltip-inner {
   white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+
+  body.ember-application {
+    .top_nav {
+    .cms-breadcrumbs  {
+      display:none;
+    }
+    }
+  }
+
 }
 
 @media (max-width: 400px) {

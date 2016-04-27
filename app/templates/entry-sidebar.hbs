@@ -15,9 +15,11 @@
 </div>
 <div class="cms cms-sidebar-bottom">
   <div class="cms cms-sidebar-actions">
+  <a {{action "toggleSidebar"}} class="cms cms-action cms-btn-close">
+    <i class="cms cms-icon fa fa-times" aria-hidden="true"></i>Close</a>
     {{#if canDelete}}
     <a {{action 'delete'}} class="cms cms-action cms-btn-delete">
-      <i class="cms cms-icon cms-icon-remove"></i>
+      <i class="cms cms-icon fa fa-trash-o" aria-hidden="true"></i>
       Delete
     </a>
     {{/if}}

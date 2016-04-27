@@ -34,6 +34,19 @@ body.ember-application {
     flex-shrink: 0;
     padding: $container_padding 2*$container_padding;
   }
+  .cms-sidebar-top {
+    .cms-close-btn {
+      position: absolute;
+      left: -35px;
+      top: 0px;
+      margin: 0px;
+      padding: 5px 10px;
+      background-color: #34495E;
+      color: #fff;
+
+    }
+
+  }
   .cms-navbar-top {
     height: $navbar_top_height;
     line-height: $navbar_top_height - 2*$container_padding;

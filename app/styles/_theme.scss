@@ -47,10 +47,12 @@ body.ember-application {
     color: #aaa;
   }
   .cms-collection {
-    margin-bottom: $container-padding;
+
+    line-height:3;
   }
   .cms-aside-link {
     color: #fff;
+    padding: 0px $container_padding;
     text-decoration: none;
     .cms-icon {
       visibility: hidden;
@@ -58,6 +60,9 @@ body.ember-application {
     }
     &.active {
       color: #fff;
+      display:block;
+      background-color:#1F8BE0;
+      border-right:4px solid #337ab7;
       .cms-icon {
         visibility: visible;
       }
@@ -162,7 +167,7 @@ body.ember-application {
     position: relative;
   }
 
-  .cms-link.cms-save-btn, .cms-link.cms-settings-btn, .cms-action.cms-btn-delete {
+  .cms-link.cms-save-btn, .cms-link.cms-settings-btn, .cms-action.cms-btn-delete, .cms-action.cms-btn-close {
     margin-top: -$container-padding/2;
     border: 1px solid $color-highlight;
     padding: 3px $container-padding;
@@ -183,13 +188,13 @@ body.ember-application {
     text-decoration: none;
     color: $color-text-normal;
     font-size: 14px;
-    margin-right: $container-padding;
+    margin-right: $actionbtn_margin;
     cursor: pointer;
     &:hover {
       color: $color-highlight;
     }
   }
-  .cms-action.cms-btn-delete {
+  .cms-action.cms-btn-delete, .cms-action.cms-btn-close {
     background: $color-highlight;
     color: #fff;
     .cms-icon {
