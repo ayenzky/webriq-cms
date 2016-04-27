@@ -246,6 +246,9 @@ body.nav-sm {
 }
 
 body {
+  &.ember-application{
+    background-color: #fff;
+  }
   &.ember-application .top_nav .cms-breadcrumbs {
     padding-top: 2px;
     line-height: 4;
@@ -788,6 +791,7 @@ li.current-page a {
   height: 55px;
   margin: 0;
   padding-left: 10px;
+  text-decoration:none !important;
 }
 
 .nav-sm .site_title {
