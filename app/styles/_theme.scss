@@ -100,11 +100,14 @@ body.ember-application {
   .cms-login-button {
     display: block;
     margin-top: 2*$container-padding;
-    background: $color-bg-highlight;
     padding: $container-padding;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
+    background-color: $color_highlight;
+    text-decoration: none;
+    font-weight: 300;
+    font-family: Lato;
   }
   .cms-list {
     padding: 0;
