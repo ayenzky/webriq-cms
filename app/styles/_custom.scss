@@ -40,27 +40,40 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-#left_col-2 ul.cms.cms-nav-menu li a:first-child::before {
-  font-family: FontAwesome;
-  color: #fff;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  width: auto;
-  text-align: center;
-  margin-right: 10px;
+#left_col-2 {
+  ul.cms.cms-nav-menu {
+    li {
+      a {
+        &:first-child {
+          &::before {
+            font-family: FontAwesome;
+            color: #fff;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            width: auto;
+            text-align: center;
+            margin-right: 10px;
+            content: "\f192";
+
+          }
+        }
+        &[href="#/collections/posts"]::before {
+          content: "\f0f6";
+        }
+        &[href="#/collections/faq"]::before {
+          content: "\f128";
+        }
+        &[href="#/collections/settings"]::before {
+          content: "\f013";
+        }
+
+      }
+
+    }
+  }
 }
 
-a {
-  &[href="#/collections/posts"]::before {
-    content: "\f0f6";
-  }
-  &[href="#/collections/faq"]::before {
-    content: "\f128";
-  }
-  &[href="#/collections/settings"]::before {
-    content: "\f013";
-  }
-}
+
 
 body.nav-sm {
   .container.body {
@@ -776,6 +789,7 @@ li.current-page a {
   color: #ECF0F1 !important;
   margin-left: 0 !important;
   line-height: 32px;
+  text-decoration:none;
 }
 
 .site_title {
