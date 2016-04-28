@@ -918,6 +918,7 @@ footer {
   padding: 15px 20px;
   margin: 0 -10px;
   color:#999;
+  clear:both;
 }
 
 @media (min-width: 768px) {
@@ -1129,7 +1130,7 @@ h2 {
 .x_panel {
   position: relative;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   padding: 10px 17px;
   display: inline-block;
   background: #fff;
