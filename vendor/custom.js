@@ -57,9 +57,12 @@ $(document).ajaxComplete(function () {
             //     $('#sidebar-menu li.active').addClass('active-sm').removeClass('active');
             // }
         }
+        else if ($('body').hasClass('nav-sm')){
+            $('body').removeClass('nav-sm').addClass('nav-md');
+        }
         else {
-            $('body').removeClass('nav-sm' || 'nav-sm nav-md').addClass('nav-md');
-            $('.sidebar-footer').show();
+            $('body').removeClass('nav-sm nav-md').addClass('nav-md');
+            // $('.sidebar-footer').show();
 
             // if ($('#sidebar-menu li').hasClass('active-sm')) {
             //     $('#sidebar-menu li.active-sm').addClass('active').removeClass('active-sm');
