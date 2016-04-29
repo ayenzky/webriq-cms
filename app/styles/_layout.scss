@@ -1,6 +1,10 @@
 body.ember-application {
   > .ember-view {
     height: 100%;
+    .cms-list-preview {
+      list-style:none;
+      padding-left:0px;
+    }
   }
 
   .container {
