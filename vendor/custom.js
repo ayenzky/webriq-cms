@@ -57,11 +57,8 @@ $(document).ajaxComplete(function () {
             //     $('#sidebar-menu li.active').addClass('active-sm').removeClass('active');
             // }
         }
-        else if ($('body').hasClass('nav-sm nav-md')){
-            $('body').removeClass('nav-sm nav-md').addClass('nav-md');
-        }
         else {
-            $('body').removeClass('nav-sm').addClass('nav-md');
+            $('body').removeClass('nav-sm' || 'nav-sm nav-md').addClass('nav-md');
             $('.sidebar-footer').show();
 
             // if ($('#sidebar-menu li').hasClass('active-sm')) {
