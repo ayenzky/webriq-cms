@@ -124,7 +124,7 @@ $(document).ajaxComplete(function () {
 
 
 
-     }, 1000);
+     }, 3000);
 });
 
 // Sidebar Menu active class
