@@ -58,7 +58,7 @@ $(document).ajaxComplete(function () {
             // }
         }
         else {
-            $('body').removeClass('nav-sm, nav-sm nav-md').addClass('nav-md');
+            $('body').removeClass('nav-sm' || 'nav-sm nav-md').addClass('nav-md');
             $('.sidebar-footer').show();
 
             // if ($('#sidebar-menu li').hasClass('active-sm')) {
