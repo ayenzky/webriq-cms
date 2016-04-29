@@ -10,6 +10,23 @@
   overflow-x:hidden;
 }
 
+body.nav-sm.nav-md {
+  .container.body {
+    .left_col {
+      width: 70px;
+      padding: 0;
+      position: absolute;
+      top: 0;
+    }
+    .right_col {
+      padding: 0;
+      margin-left: 70px;
+    }
+  }
+}
+
+
+
 h1, h2, h3, h4, h5 {
   font-family: "Lato", Arial, sans serif;
 
