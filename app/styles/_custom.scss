@@ -337,6 +337,12 @@ body {
 }
 
 @media (max-width: 991px) {
+  body.nav-sm.nav-md .container.body{
+    .right_col {
+      margin-left:0px;
+    }
+
+  }
   body.nav-md .container.body {
     .right_col, .top_nav {
       width: 100%;
@@ -352,7 +358,6 @@ body {
   }
   .right_col {
     padding: 10px !important;
-    margin-left: 0px !important;
   }
 }
 
