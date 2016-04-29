@@ -339,7 +339,7 @@ body {
 @media (max-width: 991px) {
   body.nav-sm.nav-md .container.body{
     .right_col {
-      margin-left:0px;
+      margin-left:0px !important;
     }
 
   }
