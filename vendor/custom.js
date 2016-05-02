@@ -17,7 +17,7 @@ $(document).bind('load', function(e){
 
 })
 $(document).ajaxComplete(function () {
-    $('body').addClass('nav-md');
+    // $('body').addClass('nav-md');
 
 
 
@@ -47,29 +47,31 @@ $(document).ajaxComplete(function () {
     //     }
     // });
 
-    $('#menu_toggle').click(function () {
-        if ($('body').hasClass('nav-md')) {
-            $('body').removeClass('nav-md').addClass('nav-sm');
-            // $('.left_col').removeClass('scroll-view').removeAttr('style');
-            // $('.sidebar-footer').hide();
+    // $('#menu_toggle').click(function () {
+    //     if ($('body').hasClass('nav-md')) {
+    //         $('body').removeClass('nav-md').addClass('nav-sm');
+    //         // $('.left_col').removeClass('scroll-view').removeAttr('style');
+    //         // $('.sidebar-footer').hide();
 
-            // if ($('#sidebar-menu li').hasClass('active')) {
-            //     $('#sidebar-menu li.active').addClass('active-sm').removeClass('active');
-            // }
-        }
-        else if ($('body').hasClass('nav-sm')){
-            $('body').removeClass('nav-sm').addClass('nav-md');
-        }
-        else {
-            $('body').removeClass('nav-sm nav-md').addClass('nav-md');
-            // $('.sidebar-footer').show();
+    //         // if ($('#sidebar-menu li').hasClass('active')) {
+    //         //     $('#sidebar-menu li.active').addClass('active-sm').removeClass('active');
+    //         // }
+    //         console.log('click');
+    //     }
+    //     else if ($('body').hasClass('nav-sm')){
+    //         $('body').removeClass('nav-sm').addClass('nav-md');
+    //     }
+    //     else {
+    //         $('body').removeClass('nav-sm nav-md').addClass('nav-md');
+    //         // $('.sidebar-footer').show();
 
-            // if ($('#sidebar-menu li').hasClass('active-sm')) {
-            //     $('#sidebar-menu li.active-sm').addClass('active').removeClass('active-sm');
-            // }
-        }
+    //         // if ($('#sidebar-menu li').hasClass('active-sm')) {
+    //         //     $('#sidebar-menu li.active-sm').addClass('active').removeClass('active-sm');
+    //         // }
+    //     }
 
-    });
+    // });
+
 
 //     $('.collapse-link').click(function () {
 //     var x_panel = $(this).closest('div.x_panel');
