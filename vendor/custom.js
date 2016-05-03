@@ -7,15 +7,6 @@
 // Sidebar
 
 
-
-$(document).bind('load', function(e){
-
-    if( $("div").hasClass("cms-content cms-entry-editor") )
-    {
-     $('.navbar.nav_title').addClass("text");
-    }
-
-})
 $(document).ajaxComplete(function () {
     // $('body').addClass('nav-md');
 

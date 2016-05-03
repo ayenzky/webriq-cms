@@ -32,7 +32,7 @@ module.exports = function(defaults) {
   // app.import('vendor/bootstrap-progressbar.min.js');
   // app.import('vendor/pace.min.js')
   // app.import('vendor/easyResponsiveTabs.js')
-  app.import('vendor/custom.js')
+  // app.import('vendor/custom.js')
 
 
 
